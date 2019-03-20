@@ -1028,3 +1028,19 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+
+		/* for class name avatar i want to target the img */
+		.avatar > img {
+			height:128px;
+			width:128px;
+		}
+
+		.contact_button {
+			/* margin bottom is distance between elements */
+			margin-bottom:10px;
+		}
+
+		/* when it's an id you use a hashtag rather than a period */
+		#contact-form {
+			display:none;
+		}
