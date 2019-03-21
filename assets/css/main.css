@@ -896,7 +896,7 @@
 		opacity: 0.95;
 		position: relative;
 		text-align: center;
-		width: 50em;
+		width: 70em;
 	}
 
 		#main .avatar {
@@ -928,7 +928,7 @@
 
 			#main {
 				padding: 4em 2em 2.5em 2em ;
-				width: 80%;
+				width: 100%;
 			}
 
 				#main .avatar:before {
