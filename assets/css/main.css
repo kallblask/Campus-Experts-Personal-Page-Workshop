@@ -112,10 +112,10 @@
 	body {
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/pretty.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/pretty.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/pretty.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/pretty.jpg");
 		background-repeat: repeat,			no-repeat,			no-repeat;
 		background-size: 100px 100px, cover,				cover;
 		background-position: top left,		center center,		bottom center;
@@ -892,11 +892,11 @@
 		background: #ffffff;
 		border-radius: 4px;
 		cursor: default;
-		max-width: 100%;
+		max-width: 100%
 		opacity: 0.95;
 		position: relative;
 		text-align: center;
-		width: 27em;
+		width: 70em;
 	}
 
 		#main .avatar {
@@ -1003,6 +1003,7 @@
 		-ms-perspective: 1000px;
 		perspective: 1000px;
 		position: relative;
+		min-width: 100%;
 		min-height: 100%;
 		padding: 1.5em;
 		z-index: 2;
@@ -1020,7 +1021,7 @@
 		@media screen and (max-width: 360px) {
 
 			#wrapper {
-				padding: 0.75em;
+				padding: 2em;
 			}
 
 		}
@@ -1042,5 +1043,108 @@
 
 		/* when it's an id you use a hashtag rather than a period */
 		#contact-form {
-			display:none;
+			display:block;
+		}
+
+		ul.buttons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+		margin-top: -0.675em;
+		}
+
+		ul.buttons li {
+			display: inline-block;
+			padding: 0.675em 0.5em;
+		}
+
+			ul.buttons li a {
+				text-decoration: none;
+				position: relative;
+				display: block;
+				width: 10em;
+				height: 3em;
+				/*border-radius: 100%;*/
+				border: solid 1px #c8cccf;
+				line-height: 3.75em;
+				overflow: hidden;
+				text-align: center;
+				text-indent: 3.75em;
+				white-space: nowrap;
+				text-align: center;
+			}
+
+				ul.buttons li a:before {
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-transform: none !important;
+				}
+
+				ul.buttons li a:before {
+					color: #ffffff;
+					/*text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;*/
+				}
+
+				ul.buttons li a:hover:before {
+					/*text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;*/
+				}
+
+				ul.buttons li a:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: inherit;
+					height: inherit;
+					font-size: 1.85rem;
+					line-height: inherit;
+					text-align: center;
+					text-indent: 0;
+				}
+
+				ul.buttons li a:hover {
+					border-color: #ff7496;
+				}
+
+		@media screen and (max-width: 480px) {
+
+			ul.buttons li a:before {
+				font-size: 1.5rem;
+			}
+
+		}
+
+		/* Style the buttons that are used to open and close the accordion panel */
+		.accordion {
+		  background-color: #eee;
+		  color: #444;
+		  cursor: pointer;
+		  padding: 10px;
+		  width: 100%;
+		  height:100%;
+		  border: none;
+		  outline: none;
+		  transition: 0.4s;
+		  font-size: 20px;
+		  text-align:center;
+		  display:inline-block;
+		  overflow: hidden;
+		  margin-bottom: 10px;
+		}
+
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		.active, .accordion:hover {
+		  background-color: #ccc;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		.panel {
+		  padding: 0 18px;
+		  background-color: rgba(0,150,255, 0.5);
+		  display: none;
+		  overflow: hidden;
+		  text-align:center;
+		  margin-bottom: 10px;
 		}
